@@ -201,9 +201,9 @@ public class FabSpeedDial extends LinearLayout implements View.OnClickListener {
         }
 
         miniFabDrawableTint = typedArray.getColorStateList(R.styleable.FabSpeedDial_miniFabDrawableTint);
-        if (miniFabDrawableTint == null) {
-            miniFabDrawableTint = getColorStateList(R.color.mini_fab_drawable_tint);
-        }
+        //if (miniFabDrawableTint == null) {
+            //miniFabDrawableTint = getColorStateList(R.color.mini_fab_drawable_tint);
+        //}
 
         miniFabTitleBackgroundTint = typedArray.getColorStateList(R.styleable.FabSpeedDial_miniFabTitleBackgroundTint);
         if (miniFabTitleBackgroundTint == null) {
@@ -426,7 +426,7 @@ public class FabSpeedDial extends LinearLayout implements View.OnClickListener {
         }
 
         miniFab.setBackgroundTintList(miniFabBackgroundTint);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && miniFabDrawableTint != null) {
             miniFab.setImageTintList(miniFabDrawableTint);
         }
 
